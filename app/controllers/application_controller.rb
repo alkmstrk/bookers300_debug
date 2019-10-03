@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 
     # devise.rbを編集したことにより、nameは受け付けるが、emailは受け付けなくなる。なのでストロングパラメーターにemailを追加
     def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
     end
 
 end
